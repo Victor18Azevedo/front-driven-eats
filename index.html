@@ -29,28 +29,40 @@
             <img class="item-img" src="./images/prato1.png" alt="" />
             <h3 class="item-nome">Frango Yin Yang</h3>
             <p class="item-descricao">Um pouco de batata, um pouco de salada</p>
-            <p class="item-preco">R$ 14,90</p>
+            <div class="item-preco">
+              <p>R$ <spam class="valor">10,10</spam></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
           </div>
 
           <div class="item prato2" onclick="selecionarItem('.prato2')">
             <img class="item-img" src="./images/prato1.png" alt="" />
             <h3 class="item-nome">Frango Yin Yang</h3>
             <p class="item-descricao">Um pouco de batata, um pouco de salada</p>
-            <p class="item-preco">R$ 14,90</p>
+            <div class="item-preco">
+              <p>R$ <spam class="valor">12,10</spam></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
           </div>
 
           <div class="item prato3" onclick="selecionarItem('.prato3')">
             <img class="item-img" src="./images/prato1.png" alt="" />
             <h3 class="item-nome">Frango Yin Yang</h3>
             <p class="item-descricao">Um pouco de batata, um pouco de salada</p>
-            <p class="item-preco">R$ 14,90</p>
+            <div class="item-preco">
+              <p>R$ <spam class="valor">14,10</spam></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
           </div>
 
           <div class="item prato4" onclick="selecionarItem('.prato4')">
             <img class="item-img" src="./images/prato1.png" alt="" />
             <h3 class="item-nome">Frango Yin Yang</h3>
             <p class="item-descricao">Um pouco de batata, um pouco de salada</p>
-            <p class="item-preco">R$ 14,90</p>
+            <div class="item-preco">
+              <p>R$ <spam class="valor">16,10</spam></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
           </div>
         </div>
       </section>
@@ -62,21 +74,30 @@
             <img class="item-img" src="./images/bebida1.png" alt="" />
             <h3 class="item-nome">Coquinha gelada</h3>
             <p class="item-descricao">Lata 350ml</p>
-            <p class="item-preco">R$ 4,90</p>
+            <div class="item-preco">
+              <p>R$ <spam class="valor">3,90</spam></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
           </div>
 
           <div class="item bebida2" onclick="selecionarItem('.bebida2')">
             <img class="item-img" src="./images/bebida1.png" alt="" />
             <h3 class="item-nome">Coquinha gelada</h3>
             <p class="item-descricao">Lata 350ml</p>
-            <p class="item-preco">R$ 4,90</p>
+            <div class="item-preco">
+              <p>R$ <spam class="valor">4,00</spam></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
           </div>
 
           <div class="item bebida3" onclick="selecionarItem('.bebida3')">
             <img class="item-img" src="./images/bebida1.png" alt="" />
             <h3 class="item-nome">Coquinha gelada</h3>
             <p class="item-descricao">Lata 350ml</p>
-            <p class="item-preco">R$ 4,90</p>
+            <div class="item-preco">
+              <p>R$ <spam class="valor">5,50</spam></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
           </div>
         </div>
       </section>
@@ -88,21 +109,30 @@
             <img class="item-img" src="./images/sobremesa1.png" alt="" />
             <h3 class="item-nome">Pudim</h3>
             <p class="item-descricao">Apenas pudim</p>
-            <p class="item-preco">R$ 7,90</p>
+            <div class="item-preco">
+              <p>R$ <spam class="valor">6,90</spam></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
           </div>
 
           <div class="item sobremesa2" onclick="selecionarItem('.sobremesa2')">
             <img class="item-img" src="./images/sobremesa1.png" alt="" />
             <h3 class="item-nome">Pudim</h3>
             <p class="item-descricao">Apenas pudim</p>
-            <p class="item-preco">R$ 7,90</p>
+            <div class="item-preco">
+              <p>R$ <spam class="valor">7,90</spam></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
           </div>
 
           <div class="item sobremesa3" onclick="selecionarItem('.sobremesa3')">
             <img class="item-img" src="./images/sobremesa1.png" alt="" />
             <h3 class="item-nome">Pudim</h3>
             <p class="item-descricao">Apenas pudim</p>
-            <p class="item-preco">R$ 7,90</p>
+            <div class="item-preco">
+              <p>R$ <spam class="valor">8,90</spam></p>
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
           </div>
         </div>
       </section>
@@ -114,10 +144,16 @@
       </section>
     </main>
     <footer>
-      <button class="btn btn-pedir btn-wait">
-        Selecione os 3 itens para fechar o pedido
-      </button>
+      <div class="btn-container">
+        <button class="btn-pedir btn-wait">
+          Selecione os 3 itens para fechar o pedido
+        </button>
+      </div>
     </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
     <script src="./scripts/script.js"></script>
   </body>
 </html>
