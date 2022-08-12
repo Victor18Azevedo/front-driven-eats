@@ -10,7 +10,9 @@ body {
 
 header,
 footer,
-.container {
+.pratos,
+.bebidas,
+.sobremesas {
   display: none;
 }
 
@@ -38,8 +40,7 @@ footer,
   }
 
   header,
-  footer,
-  .container {
+  footer {
     display: initial;
     padding: 0 16px;
   }
@@ -62,7 +63,7 @@ footer,
     font-size: 44px;
   }
 
-  header > p {
+  .slogan {
     font-family: "Roboto", cursive;
     font-size: 18px;
     line-height: 1.5;
@@ -74,9 +75,9 @@ footer,
     margin: 120px auto;
   }
 
-  .prato,
-  .bebida,
-  .sobremesa {
+  .pratos,
+  .bebidas,
+  .sobremesas {
     display: block;
     margin-top: 32px;
     padding: 0 16px;
@@ -96,7 +97,7 @@ footer,
   }
 
   .item {
-    width: 172px;
+    flex: 0 0 172px;
     height: 216px;
     padding: 18px 14px;
     border-radius: 9px;
@@ -104,19 +105,21 @@ footer,
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
   }
 
-  .img-item {
+  .item-img {
     width: 144px;
+    height: auto;
     border-radius: 4px;
+    margin: 0 auto;
   }
 
-  .nome-item {
+  .item-nome {
     font-family: "Roboto", cursive;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.8;
   }
 
-  .descricao {
+  .item-descricao {
     font-family: "Roboto", cursive;
     font-size: 15px;
     font-weight: 300;
@@ -124,12 +127,17 @@ footer,
     color: #a6a6a6;
   }
 
-  .preco {
+  .item-preco {
     font-family: "Roboto", cursive;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.8;
     color: #000;
+  }
+
+  .selecionado {
+    border: 5px solid #32b72f;
+    padding: 13px 9px;
   }
 
   footer {
@@ -144,12 +152,10 @@ footer,
     background-color: #fff;
   }
 
-  .finalizar-pedido {
+  .btn {
     font-family: "Roboto", cursive;
     font-size: 20px;
-    font-weight: 400;
     color: #fff;
-    background-color: #cbcbcb;
     width: 364px;
     height: 61px;
     border: none;
@@ -157,7 +163,13 @@ footer,
     padding: 0 70px;
   }
 
-  .fecha-pedido {
-    display: none;
+  .btn-wait {
+    font-weight: 400;
+    background-color: #cbcbcb;
+  }
+
+  .btn-submit {
+    font-weight: 700;
+    background-color: #32b72f;
   }
 }
