@@ -97,8 +97,15 @@ footer,
     width: 100%;
     display: flex;
     gap: 16px;
-    overflow: scroll;
     margin-top: 17px;
+    overflow: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Hide scrolbar Chrome */
+  .caixa-itens::-webkit-scrollbar {
+    display: none;
   }
 
   .item {
@@ -112,7 +119,7 @@ footer,
 
   .item-img {
     width: 144px;
-    height: auto;
+    height: 87px;
     border-radius: 4px;
     margin: 0 auto;
   }
@@ -132,7 +139,7 @@ footer,
     color: #a6a6a6;
   }
 
-  .item-preco {
+  .item-preco-real {
     font-family: "Roboto", cursive;
     font-size: 16px;
     font-weight: 400;
