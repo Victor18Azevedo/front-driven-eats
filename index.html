@@ -156,6 +156,35 @@
           </div>
         </div>
       </section>
+
+      <section class="aviso-confirma-pedido hide">
+        <div class="popup">
+          <h5>Confirme seu pedido</h5>
+          <table>
+            <tr>
+              <td class="prato-pedido-nome">frango</td>
+              <td class="prato-pedido-preco">25</td>
+            </tr>
+            <tr>
+              <td class="bebida-pedido-nome">coca</td>
+              <td class="bebida-pedido-preco">5</td>
+            </tr>
+            <tr>
+              <td class="sobremesa-pedido-nome">pudim</td>
+              <td class="sobremesa-pedido-preco">2</td>
+            </tr>
+            <tr class="total-pedido">
+              <td>TOTAL</td>
+              <td class="total-preco">213</td>
+            </tr>
+          </table>
+          <button class="btn btn-confima-pedido" onclick="confirmarPedido()">
+            Tudo certo, pode pedir!
+          </button>
+          <p onclick="refazerPedido()">Cancela</p>
+        </div>
+      </section>
+
       <section class="desktop">
         <p>
           Desculpe o transtorno!!!<br />Por enquanto, estamos funcionando apenas
@@ -164,11 +193,9 @@
       </section>
     </main>
     <footer>
-      <div class="btn-container">
-        <button class="btn-pedir btn-wait">
-          Selecione os 3 itens para fechar o pedido
-        </button>
-      </div>
+      <button class="btn-pedir btn-wait" onclick="fazerPedido()">
+        Selecione os 3 itens para fechar o pedido
+      </button>
     </footer>
     <script
       type="module"

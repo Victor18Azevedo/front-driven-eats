@@ -6,13 +6,15 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #e5e5e5;
   color: #333;
+  position: relative;
 }
 
 header,
 footer,
 .pratos,
 .bebidas,
-.sobremesas {
+.sobremesas,
+.aviso-confirma-pedido {
   display: none;
 }
 
@@ -85,12 +87,12 @@ footer,
   .sobremesas {
     display: block;
     margin-top: 32px;
-    padding: 0 16px;
   }
 
   h2 {
     font-family: "Righteous", cursive;
     font-size: 26px;
+    padding-left: 16px;
   }
 
   .caixa-itens {
@@ -98,9 +100,10 @@ footer,
     display: flex;
     gap: 16px;
     margin-top: 17px;
+    padding: 10px 16px;
     overflow: scroll;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Hide scrolbar IE and Edge */
+    scrollbar-width: none; /* Hide scrolbar Firefox */
   }
 
   /* Hide scrolbar Chrome */
@@ -114,7 +117,7 @@ footer,
     padding: 18px 14px;
     border-radius: 9px;
     background-color: #fff;
-    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 8px rgb(0 0 0 / 15%);
   }
 
   .item-img {
@@ -152,8 +155,7 @@ footer,
   }
 
   .selecionado {
-    border: 5px solid #32b72f;
-    padding: 13px 9px;
+    box-shadow: inset 0 0 0 5px #32b72f, 0px 8px 4px -4px rgb(0 0 0 / 25%);
   }
 
   .icon-check {
@@ -164,6 +166,9 @@ footer,
   }
 
   footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -171,14 +176,6 @@ footer,
     width: 100%;
     height: 92px;
     background-color: #fff;
-  }
-
-  .btn-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .btn-pedir {
@@ -200,5 +197,79 @@ footer,
   .btn-submit {
     font-weight: 700;
     background-color: #32b72f;
+  }
+
+  .aviso-confirma-pedido {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup {
+    width: 80%;
+    height: auto;
+    background-color: #50d074;
+    border-radius: 9px;
+    color: #fff;
+    padding: 25px;
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  h5 {
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 15px;
+    font-weight: 400;
+  }
+
+  .total-pedido {
+    font-weight: 700;
+  }
+
+  .btn-confima-pedido {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 52px;
+    font-family: "Roboto", cursive;
+    font-size: 22px;
+    font-weight: 700;
+    color: #50d074;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0 30px;
+    margin-top: 15px;
+  }
+
+  .popup p {
+    display: block;
+    width: 80%;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  .hide {
+    display: none;
   }
 }
