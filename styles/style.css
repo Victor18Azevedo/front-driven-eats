@@ -153,6 +153,7 @@ footer,
     display: initial;
     color: #32b72f;
     font-size: 16px;
+    z-index: 0;
   }
 
   footer {

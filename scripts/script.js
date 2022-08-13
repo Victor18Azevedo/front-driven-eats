@@ -1,3 +1,5 @@
+const telefonePedido = 5583981129704;
+
 function selecionarItem(itemSelecionado) {
   const regexPrato = /prato/;
   const regexBebida = /bebida/;
@@ -55,7 +57,7 @@ function selecionarItem(itemSelecionado) {
     const pedidoMensagem = mensagem();
     1;
     const btn = document.querySelector(".btn-container");
-    btn.innerHTML = `<a href='https://wa.me/5583988485089?text=${encodeURIComponent(
+    btn.innerHTML = `<a href='https://wa.me/${telefonePedido}?text=${encodeURIComponent(
       pedidoMensagem
     )}' target=_blank><button class="btn-pedir btn-submit">Fazer o pedido</button></a>`;
   }
