@@ -90,9 +90,6 @@ function selecionarItem(itemSelecionado) {
     btn.classList.remove("btn-wait");
     btn.classList.add("btn-submit");
     btn.innerHTML = "Fazer o pedido";
-    // btn.innerHTML = `<a href='https://wa.me/${telefonePedido}?text=${encodeURIComponent(
-    //   pedidoMensagem
-    // )}' target=_blank><button class="btn-pedir btn-submit"></button></a>`;
   }
 }
 
@@ -102,15 +99,20 @@ function fazerPedido() {
 
   //Mostrar dados itens selecionados
   document.querySelector(".prato-pedido-nome").innerHTML = pratoNome;
-  document.querySelector(".prato-pedido-preco").innerHTML =
-    pratoPreco.toFixed(2);
+  document.querySelector(".prato-pedido-preco").innerHTML = pratoPreco
+    .toFixed(2)
+    .replace(".", ",");
   document.querySelector(".bebida-pedido-nome").innerHTML = bebidaNome;
-  document.querySelector(".bebida-pedido-preco").innerHTML =
-    bebidaPreco.toFixed(2);
+  document.querySelector(".bebida-pedido-preco").innerHTML = bebidaPreco
+    .toFixed(2)
+    .replace(".", ",");
   document.querySelector(".sobremesa-pedido-nome").innerHTML = sobremesaNome;
-  document.querySelector(".sobremesa-pedido-preco").innerHTML =
-    sobremesaPreco.toFixed(2);
-  document.querySelector(".total-preco").innerHTML = precoTotal.toFixed(2);
+  document.querySelector(".sobremesa-pedido-preco").innerHTML = sobremesaPreco
+    .toFixed(2)
+    .replace(".", ",");
+  document.querySelector(".total-preco").innerHTML = precoTotal
+    .toFixed(2)
+    .replace(".", ",");
 }
 
 function refazerPedido() {
@@ -127,7 +129,7 @@ function confirmarPedido() {
 - Prato: ${pratoNome}
 - Bebida: ${bebidaNome}
 - Sobremesa: ${sobremesaNome}
-Total: R$ ${precoTotal.toFixed(2)}
+Total: R$ ${precoTotal.toFixed(2).replace(".", ",")}
   
 Nome: ${clienteNome}
 Endereço: ${clienteEndereco}`;
